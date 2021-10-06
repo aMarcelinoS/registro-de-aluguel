@@ -1,16 +1,16 @@
 package entities;
 
-public class RentRooms {
+public class Rent {
 	private String name;
 	private String email;
-	private int room;
 	
 	
-	public RentRooms(String name, String email, int room) {
+	
+	public Rent(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;
-		this.room = room;
+		
 	}
 
 	public String getName() {
@@ -29,14 +29,12 @@ public class RentRooms {
 		this.email = email;
 	}
 
-	public int getRoom() {
-		return room;
-	}
-
-	public void setRoom(int room) {
-		this.room = room;
-	}
 	
+	public String toString () {
+		return name 
+				+ ", " 
+				+ email;
+	}
 	
 	
 
