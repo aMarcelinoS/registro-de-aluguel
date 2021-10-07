@@ -16,7 +16,7 @@ public class Program {
 		int n = sc.nextInt();
 		
 		
-		for (int i = 1; i<n; i++) {
+		for (int i = 1; i<=n; i++) {
 			System.out.println();
 			System.out.println("Rent #"+i+":");
 			sc.nextLine();
@@ -26,17 +26,20 @@ public class Program {
 			System.out.print("Email: ");
 			String email = sc.nextLine();
 			
-			vect [i] = new Rent (name, email);			
+			System.out.print("Room: ");
+			int room = sc.nextInt();
+			
+			vect [room] = new Rent (name, email);			
 		}
 		
-		
+				
+		System.out.println();
 		System.out.println("Busy rooms: ");
-		
-		
-		
-		
-		
-		
+		for (int i = 0; i<10; i++) {
+			if (vect [i] !=null) {
+				System.out.println(i + ": " + vect [i]);
+			}
+		}
 		sc.close();	
 	}
 
